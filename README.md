@@ -1,11 +1,12 @@
 # faceoff
 Quick and dirty image sorter by faces.
 The script will attempt to sort images by face and create a sub-directory with the face ID as directory name.
+The original images will be copied to the new sub-directory to make sure data is not lost.
 
 Make sure to run the pre_req_install.sh before running the script.
 
 ## Usage
-python3 faceoff.py <directory with the images to be sorted>
+python3 faceoff.py directory/with/the/images/to/be/sorted/
 
 ## Credits
 Credit goes to Adam Geitgey for the face_recognition python module.
@@ -14,6 +15,7 @@ https://github.com/ageitgey/face_recognition
 ## Caveats
 The script does not perform recursion within directories.
 The target directory should only contain image files, no sub-directories.
+I have not tested with images with several faces, the expected behaviour should be that the same image will end up in two directories.
 
 As stated in the caveats over at https://github.com/ageitgey/face_recognition/blob/master/README.md
 
