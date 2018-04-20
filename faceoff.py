@@ -5,6 +5,8 @@ import os
 import shutil
 import sys
 
+print('Faceoff - Quick and dirty image sorter by face')
+print('By greatwhitehat')
 
 image_file_types = ('.jpg', '.jpeg', '.png', '.gif')
 
