@@ -6,7 +6,7 @@ The original images will be copied to the new sub-directory to make sure data is
 Make sure to run the pre_req_install.sh before running the script.
 
 ## Usage
-python3 faceoff.py directory/with/the/images/to/be/sorted/
+python3 faceoff.py source/directory/ target/directory/
 
 ## Credits
 Credit goes to Adam Geitgey for the face_recognition python module.
