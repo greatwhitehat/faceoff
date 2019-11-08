@@ -9,7 +9,7 @@ Make sure to run the pre_req_install.sh before running the script.
 python3 faceoff.py source/directory/ target/directory/ [--recursion]
 
 ### Recursion
-Recursion was added to enable processing of trees of directories in one go. By adding --recursion to the command this enabled for the runtime of the script and will treat the source directory as the root of the tree. The target directory will NOT reflect the source tree, it will still be 
+Recursion was added to enable processing of trees of directories in one go. By adding --recursion to the command this is enabled for the runtime of the script and will treat the source directory as the root of the tree. The target directory will NOT reflect the source tree, it will still be 
 
 ## Credits
 Credit goes to Adam Geitgey for the face_recognition python module.
