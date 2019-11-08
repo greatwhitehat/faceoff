@@ -6,7 +6,7 @@ The original images will be copied to the new sub-directory to make sure data is
 Make sure to run the pre_req_install.sh before running the script.
 
 ## Usage
-python3 faceoff.py source/directory/ target/directory/ [--recursion]
+python3 faceoff.py source/directory/ target/directory/ [--recursive]
 
 ### Recursion
 Recursion was added to enable processing of trees of directories in one go. By adding --recursion to the command this is enabled for the runtime of the script and will treat the source directory as the root of the tree. The target directory will NOT reflect the source tree, it will still be 
