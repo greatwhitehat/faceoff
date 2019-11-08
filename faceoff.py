@@ -55,7 +55,6 @@ class FaceOff:
                 for file in files:
                     if file.endswith(self.image_file_types):
                         self.image_files.append(os.path.join(root, file))
-                        print('DEBUG: Added %s to images' % os.path.join(root, file))
         else:
             for file in os.listdir(self.source_directory):
                 if file.endswith(self.image_file_types):
@@ -70,7 +69,6 @@ class FaceOff:
                     if not os.path.exists(os.path.join(self.target_directory, 'no_face_found')):
                         os.mkdir(os.path.join(self.target_directory, 'no_face_found'))
                     shutil.copyfile(file, os.path.join(self.target_directory, 'no_face_found', os.path.basename(file)))
-                    print('DEBUG: Copied %s to %s' % (file, os.path.join(self.target_directory, 'no_face_found')))
                 for face_encoding in face_encodings:
                     matches = fr.compare_faces(self.processed_face_encodings, face_encoding)
                     if True in matches:
@@ -86,7 +84,6 @@ class FaceOff:
                     self.processed_face_directories.append(face_id)
 
                     shutil.copyfile(file, os.path.join(self.target_directory, face_id, os.path.basename(file)))
-                    print('DEBUG: Copied %s to %s' % (file, os.path.join(self.target_directory, face_id)))
 
             except Exception as err:
                 print('ERROR: %s' % err)
