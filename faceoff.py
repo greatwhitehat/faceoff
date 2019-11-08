@@ -102,7 +102,7 @@ def exit_gracefully(_signal, _frame):
 
 if __name__ == '__main__':
 
-    VERSION = '20180420_1510'
+    VERSION = '20191108_2331'
     desc = """
 ****************************************
  FaceOff - Quick and dirty image sorter
