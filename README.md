@@ -6,15 +6,18 @@ The original images will be copied to the new sub-directory to make sure data is
 Make sure to run the pre_req_install.sh before running the script.
 
 ## Usage
-python3 faceoff.py source/directory/ target/directory/
+python3 faceoff.py source/directory/ target/directory/ [--recursion]
+
+### Recursion
+Recursion was added to enable processing of trees of directories in one go. By adding --recursion to the command this enabled for the runtime of the script and will treat the source directory as the root of the tree. The target directory will NOT reflect the source tree, it will still be 
 
 ## Credits
 Credit goes to Adam Geitgey for the face_recognition python module.
 https://github.com/ageitgey/face_recognition
 
 ## Caveats
-The script does not perform recursion within directories.
-The target directory should only contain image files, no sub-directories.
+~~The script does not perform recursion within directories.~~
+~~The source directory should only contain image files, no sub-directories.~~
 I have not tested with images with several faces, the expected behaviour should be that the same image will end up in two directories.
 
 As stated in the caveats over at https://github.com/ageitgey/face_recognition/blob/master/README.md
