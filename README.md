@@ -2,14 +2,22 @@
 Quick and dirty image sorter by faces.
 The script will attempt to sort images by face and create a sub-directory with the face ID as directory name.
 The original images will be copied to the new sub-directory to make sure data is not lost.
+The script now uses multiprocessing to try to live up the the "quick" part.
 
 Make sure to run the pre_req_install.sh before running the script.
 
 ## Usage
-python3 faceoff.py source/directory/ target/directory/ [--recursive]
+python3 faceoff.py source/directory/ target/directory/ [--recursive] [--ignore] [--alone]
 
 ### Recursion
 Recursion was added to enable processing of trees of directories in one go. By adding --recursive to the command this is enabled for the runtime of the script and will treat the source directory as the root of the tree. The target directory will NOT reflect the source tree, it will still be one directory with one sub-directory for every matched face + one folder for images where no faces were detected by the algorithm.
+
+## Ignore faceless images
+Add --ignore to simply not copy images where no faces were detected
+
+## Perform "standalone" runs
+During my testing I frequently deleted the pickle files up until I got sick of it and added the --alone switch.
+This will simply not load face information from previous runs and no data will be stored from the run either.
 
 ## Credits
 Credit goes to Adam Geitgey for the face_recognition python module.
